@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | TMSnCO Lifestyle</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap.css">
+    <link rel="shortcut icon" href="../assets/img/no-name.ico" type="image/x-icon">
+    <script src="https://checkout.squadco.com/widget/squad.min.js"></script> 
+    <script src="https://hosted.paysafe.com/checkout/v1/latest/paysafe.checkout.min.js"></script>
+</head>
+<body>
+    <div class="origin">
+        <div class="content">
+            <div class="content-header">
+                <div class="header-nav">
+                    <div class="nav-title">
+                        <div class="title-image">
+                            <img width="50" height="50" src="../assets/img/no-name.png" alt="TMSnCO Logo">
+                        </div>
+                        <div class="title-text">
+                            <h1>TMSnCO</h1>
+                        </div>
+                    </div>
+                    <div class="nav-content">
+                        <img width="50" height="50" id="menuCloseBtn" src="../assets/img/menu.svg" alt="Menu" onclick="return OpenNav();">
+                        <img width="50" height="50" id="menuOpenBtn" src="../assets/img/delete-sign.png" alt="Menu" onclick="return CloseNav();">
+                    </div>
+                </div>
+                <div class="header-nav-menu" id="header-nav-menu">
+                    <ul>
+                        <li><a class="home" href="../">Home</a></li>
+                        <li><a href="../shop/" class="shop">Shop</a></li>
+                        <li><a href="../products/" class="products">Products</a></li>
+                        <li><a href="../about/" class="about">About</a></li>
+                        <li><a href="mailto:sales@tmsncolifestyle.store" class="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-checkout">
+                
+                <div class="checkout-header">
+                    <h5 class="text-center">make payments</h5>
+
+                    <div class="table-data" id="table-data">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="table-view">
+                                            <div id="tbl">
+                                                
+                                            </div>
+                                            <div class="all-name-price">
+                                                <div class="all-name">
+                                                    <p id="AllName"></p>
+                                                </div>
+                                                <div class="all-description">
+                                                    <p id="AllDescription"></p>
+                                                </div>
+                                                <form class="" accept-charset="utf-8">
+                                                    <div class="quantity">
+                                                        <label for="quantity">Quantity</label>
+                                                        <input type="tel" name="quantityx" id="quantityx" class="form-control" value="" placeholder="1 - 28" maxlength="2" onchange="evaluatePrice(this.value)">
+                                                    </div>
+                                                    <div class="size">
+                                                        <label for="size">Size</label>
+                                                        <input type="tel" name="size" id="sizex" class="form-control" value="" placeholder="12, 16, 18" maxlength="2">
+                                                    </div>
+                                                </form>
+                                                <div class="all-price">
+                                                    <p id="AllPrice"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="chechout-form">
+                        <form class="text-center" style="padding-left: 30px; padding-right: 30px; padding-top: 30px;">
+                            <div class="row" id="showaccount">
+                                <div class="col-lg-4">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="email">Email address</label>
+                                    <input type="email" name="email-address" id="email-address" class="form-control" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="country">Country/Region</label>
+                                    <input type="text" name="country" id="country" class="form-control" required value="Canada" disabled>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" id="address" class="form-control" required value="">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="phone">Phone number</label>
+                                    <input type="tel" name="phone" id="phone" class="form-control" required value="">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="amount">Payout Amount (CAD):</label>
+                                    <input type="tel" name="amount" id="amount" class="form-control" required disabled value="0.00">
+                                </div>
+                                
+                                <div class="col-lg-4">
+                                    <div class="form-submit"><br>
+                                        <button type="button" onclick="return RequestAccount();" class="paymnt" id="Pay">Pay</button>
+                                    </div><br>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-footer">
+                <div class="footer-nav">
+                    <div class="nav-contact-info">
+                        <ul>
+                            
+                            <li>
+                                <h5>contact Us:</h5>
+                                <p><a href="mailto:sales@tmsncolifestyle.store" class="mail">sales@tmsncolifestyle.store</a></p>
+                            </li>
+                            <li>
+                                <h5>Call Us:</h5>
+                                <p><a href="tel:+1 (306) 880-3930">+1 (306) 880-3930</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-contact-links">
+                        <h5>Useful Links:</h5>
+                        <ul>
+                            <li><a class="home" href="../">Home</a></li>
+                        <li><a href="../shop/" class="shop">Shop</a></li>
+                        <li><a href="../products/" class="products">Products</a></li>
+                        <li><a href="../about/" class="about">About</a></li>
+                        <li><a href="mailto:sales@tmsncolifestyle.store" class="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copywright">
+                    &copy; 2023 - TMSnCO Lifestyle
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Libaries -->
+    <script src="https://hosted.paysafe.com/checkout/v1/latest/paysafe.checkout.min.js"></script>
+    <script src="../assets/css/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://sheetdb.io/handlebars.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/checkout.js"></script>
+    <script src="../assets/js/updatepay.js"></script>
+</body>
+</html>

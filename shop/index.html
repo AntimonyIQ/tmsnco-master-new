@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | TMSnCO Lifestyle</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap.css">
+    <link rel="shortcut icon" href="../assets/img/no-name.ico" type="image/x-icon">
+    <script src="https://sheetdb.io/handlebars.js"></script>
+</head>
+<body>
+    
+    <div class="origin">
+        <div class="content">
+            <div class="content-header">
+                <div class="header-nav">
+                    <div class="nav-title">
+                        <div class="title-image">
+                            <img width="50" height="50" src="../assets/img/no-name.png" alt="TMSnCO Logo">
+                        </div>
+                        <div class="title-text">
+                            <h1>TMSnCO</h1>
+                        </div>
+                    </div>
+                    <div class="nav-content">
+                        <img width="50" height="50" id="menuCloseBtn" src="../assets/img/menu.svg" alt="Menu" onclick="return OpenNav();">
+                        <img width="50" height="50" id="menuOpenBtn" src="../assets/img/delete-sign.png" alt="Menu" onclick="return CloseNav();">
+                    </div>
+                </div>
+                <div class="header-nav-menu" id="header-nav-menu">
+                    <ul>
+                        <li><a class="home" href="../">Home</a></li>
+                        <li><a href="../shop/" class="shop">Shop</a></li>
+                        <li><a href="../products/" class="products">Products</a></li>
+                        <li><a href="../about/" class="about">About</a></li>
+                        <li><a href="mailto:sales@tmsncolifestyle.store" class="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-shop">
+                <h4 class="display-4">LATEST PRODUCT:</h4>
+                <div class="shop-items">
+                    <div class="items-image" id="latest_image">
+                        <img width="300" height="300" src="" alt="item_image" id="latestImage" class="image">
+                    </div>
+                    <div class="items-name">
+                        <h3 id="latestTitle">--</h3>
+                    </div>
+                    <div class="item-description">
+                        <p id="latestDes">--</p>
+                    </div>
+                    <div class="item-intrest">
+                        <div class="item-price">
+                            <p id="latestPrice">--</p>
+                        </div>
+                        <div class="item-cart" id="LatestCheckout">
+                            <a id="latest-checkout" href="">BUY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-categ row">
+                    <h4 onclick="return AllTableBtn();" class="display-4" id="AllTable">All</h4>
+                    <h4 onclick="return TrackSuitBtn();" class="display-4" id="TraditionalTable">Track Suit</h4>
+                    <h4 onclick="return AnkaraBtn();" class="display-4" id="WeddingTable">Ankara</h4>
+                    <h4 onclick="return AdireBtn();" class="display-4" id="CasualTable">Adire</h4>
+                </div>
+                
+                <div class="table-data" id="table-data">
+                    
+                </div>
+                <div class="table-data" id="Table1">
+                    
+                </div>
+                <div class="table-data" id="Table2">
+                    
+                </div>
+                <div class="table-data" id="Table3">
+                
+                </div>
+                <div class="table-data" id="Table4">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Libaries -->
+    <script src="../assets/css/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/shop.js"></script>
+</body>
+</html>
